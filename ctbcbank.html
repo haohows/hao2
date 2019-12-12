@@ -1,4 +1,18 @@
+
 <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta content="mshtml 6.00.2800.1476" name="generator">
+<meta charset="UTF-8">
+<link href="custom.css" rel="stylesheet">
+</head>
+<body><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +21,7 @@
     <title>衣芙-信用卡付款頁面</title>
   </head>
   <body>
-    <$FORM_BEGIN$>
+    <form name="sslForm" id="sslForm" method="post" class="form-horizontal">
     <div class="form-wrap">
       <p class="ef-title" align="right">衣芙</p>
       <div class="form-main">
@@ -16,7 +30,7 @@
             <p style="margin-bottom: 30px;">信用卡號</p>
           </div>
           <div class="form-item inputStyle">
-            <$PAN$>
+            <div class="panform"><img id="pansvg" src="images/card.png" alt=""/> <input type="tel" class="form-control pan-col-all" id="pan_num" name="pan_num" pattern="[0-9 ]*" autocomplete="off" onkeyup="setBlur(this)" onkeypress="setBlur(this)" onkeydown="setBlur(this)"  placeholder="xxxx xxxx xxxx xxxx"	maxlength="20"> </div>
           </div>
         </div>
         <div class="form-area">
@@ -24,7 +38,7 @@
             <p style="margin-bottom: 30px;">有效月年(MMYY)</p>
           </div>
           <div class="form-item inputStyle">
-            <$EXPIRED_MONTH$><$EXPIRED_YEAR$>
+            <select name=expire_month class="form-control c-12" size="1"><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12" selected >12</option></select><select name=expire_year class="form-control c-12" size="1"><option value="2019" selected >2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option></select>
           </div>
         </div>
         <div class="form-area">
@@ -32,7 +46,7 @@
             <p style="margin-bottom: 30px;">背面末三碼</p>
           </div>
           <div class="form-item inputStyle2">
-            <$CVC2$>
+            <input type="tel" class="form-control" id="cvc2" name="cvc2" autocomplete="off" size="3" maxlength="3" pattern="\d{3}" onKeyUp="setBlur(this)" required="required" />
           </div>
         </div>
         <div class="form-area">
@@ -40,7 +54,7 @@
             <p style="margin-bottom: 30px;">輸入圖型驗證碼</p>
           </div>
           <div class="form-item inputStyle2">
-            <$GRAPHIC_SECURE_IMAGE$><$GRAPHIC_SECURE_CODE$>
+            <img id="imagesrc" border=0 src="./images"> <a><span onclick="reloadImg(); return false"><img alt="refresh" src="images/refresh.png"></span></a><input type="tel" class="form-control" name="rand" size="4" maxlength="16" required>
           </div>
         </div>
         <div class="form-area">
@@ -58,15 +72,15 @@
       <div class="form-detail">
         <div class="form-detail-area">
           <p style="padding-right: 30px;">訂單編號：</p>
-          <p><$LIDM$></p>
+          <p>01138271</p>
         </div>
         <div class="form-detail-area">
           <p style="padding-right: 30px;">交易金額：</p>
-          <p><$AMT$></p>
+          <p>958</p>
         </div>
         <div class="form-detail-area">
           <p style="padding-right: 30px;">交易日期：</p>
-          <p class="today"></p>
+          <p>0000/00/00</p>
         </div>
         <div class="form-detail-area" style="margin-bottom: 50px;">
           <p style="padding-right: 30px;">支持信用卡種類</p>
@@ -81,7 +95,7 @@
         </div>
       </div>
     </div>
-    <$FORM_END$>
+    <input type="hidden" name="timeOut"/><input type="hidden" name="_action"><input type="hidden" name="txtype" value="0"/><input type="hidden" name="ot" value="1576124824000" />
 
     <script language="JavaScript">
       function reset() {
@@ -193,7 +207,7 @@
       q {
         quotes: "" "";
       }
-      
+
       input {
         -webkit-appearance: none; /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
         -moz-appearance: none; /* FireFox */
@@ -247,7 +261,7 @@
       .form-item.inputStyle input {
         border: 1px solid #ffffff;
         padding: 5px;
-        text-align: left;
+        text-align: center;
       }
 
       .form-item.inputStyle select {
@@ -264,8 +278,7 @@
         padding: 5px;
       }
 
-      .form-area input[type="button"],
-      .form-area input[type="submit"] {
+      .form-area input[type="button"] ,.form-area input[type="submit"]{
         outline: none;
         color: #ffffff;
         font-size: 1em;
@@ -342,15 +355,15 @@
         }
       }
     </style>
-
     <p>&nbsp;</p>
-
-    <script language="javascript">
-      // 顯示交易日期
-      let today = document.querySelector(".today");
-      var Today = new Date();
-      today.textContent = `${Today.getFullYear()}/${Today.getMonth() +
-        1}/${Today.getDate()}`;
-    </script>
   </body>
 </html>
+</body>
+
+<script src="jquery-1.12.4.min.js"></script>
+<script src="paypage-custom.js"></script>
+</html>
+<!--[if lt IE 9]>
+  <script src="./plugin/ie8/html5shiv.min.js"></script>
+  <script src="./plugin/ie8/respond.min.js"></script>
+<![endif]-->
