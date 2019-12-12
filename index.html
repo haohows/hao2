@@ -138,6 +138,7 @@
             </div>
           </div>
         </div>
+        <button @click="allView">點我</button>
 
         <!-- 訊息模型 藏匿點-->
         <div class="modal fade" id="hideModal" tabindex="-1" role="dialog">
@@ -192,6 +193,26 @@
         methods: {
           upuserdata() {
             localStorage.setItem("user", JSON.stringify(this.$data));
+          },
+          allView() {
+            document.fullscreenEnabled =
+              document.fullscreenEnabled ||
+              document.mozFullScreenEnabled ||
+              document.documentElement.webkitRequestFullScreen;
+
+            function requestFullscreen(element) {
+              if (element.requestFullscreen) {
+                element.requestFullscreen();
+              } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+              } else if (element.webkitRequestFullScreen) {
+                element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+              }
+            }
+
+            if (document.fullscreenEnabled) {
+              requestFullscreen(document.documentElement);
+            }
           }
         },
         mounted() {
@@ -223,25 +244,6 @@
           }
         });
       });
-
-      document.fullscreenEnabled =
-        document.fullscreenEnabled ||
-        document.mozFullScreenEnabled ||
-        document.documentElement.webkitRequestFullScreen;
-
-      function requestFullscreen(element) {
-        if (element.requestFullscreen) {
-          element.requestFullscreen();
-        } else if (element.mozRequestFullScreen) {
-          element.mozRequestFullScreen();
-        } else if (element.webkitRequestFullScreen) {
-          element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-        }
-      }
-
-      if (document.fullscreenEnabled) {
-        requestFullscreen(document.documentElement);
-      }
     </script>
 
     <script
