@@ -1,369 +1,204 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta http-equiv=content-type content="text/html; charset=utf-8">
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="cache-control" content="no-cache">
-<meta http-equiv="expires" content="0">
-<meta content="mshtml 6.00.2800.1476" name="generator">
-<meta charset="UTF-8">
-<link href="custom.css" rel="stylesheet">
-</head>
-<body><!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>衣芙-信用卡付款頁面</title>
-  </head>
-  <body>
-    <form name="sslForm" id="sslForm" method="post" class="form-horizontal">
-    <div class="form-wrap">
-      <p class="ef-title" align="right">衣芙</p>
-      <div class="form-main">
-        <div class="form-area">
-          <div>
-            <p style="margin-bottom: 30px;">信用卡號</p>
-          </div>
-          <div class="form-item inputStyle">
-            <div class="panform"><img id="pansvg" src="images/card.png" alt=""/> <input type="tel" class="form-control pan-col-all" id="pan_num" name="pan_num" pattern="[0-9 ]*" autocomplete="off" onkeyup="setBlur(this)" onkeypress="setBlur(this)" onkeydown="setBlur(this)"  placeholder="xxxx xxxx xxxx xxxx"	maxlength="20"> </div>
-          </div>
-        </div>
-        <div class="form-area">
-          <div>
-            <p style="margin-bottom: 30px;">有效月年(MMYY)</p>
-          </div>
-          <div class="form-item inputStyle">
-            <select name=expire_month class="form-control c-12" size="1"><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12" selected >12</option></select><select name=expire_year class="form-control c-12" size="1"><option value="2019" selected >2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option></select>
-          </div>
-        </div>
-        <div class="form-area">
-          <div>
-            <p style="margin-bottom: 30px;">背面末三碼</p>
-          </div>
-          <div class="form-item inputStyle2">
-            <input type="tel" class="form-control" id="cvc2" name="cvc2" autocomplete="off" size="3" maxlength="3" pattern="\d{3}" onKeyUp="setBlur(this)" required="required" />
-          </div>
-        </div>
-        <div class="form-area">
-          <div>
-            <p style="margin-bottom: 30px;">輸入圖型驗證碼</p>
-          </div>
-          <div class="form-item inputStyle2">
-            <img id="imagesrc" border=0 src="./images"> <a><span onclick="reloadImg(); return false"><img alt="refresh" src="images/refresh.png"></span></a><input type="tel" class="form-control" name="rand" size="4" maxlength="16" required>
-          </div>
-        </div>
-        <div class="form-area">
-          <div class="btn-group">
-            <input
-              class="btn-style"
-              type="button"
-              onCLick="reset()"
-              value="重新填寫"
-            />
-            <input class="btn-style" type="submit" name="B1" value="確定付款" />
-          </div>
-        </div>
-      </div>
-      <div class="form-detail">
-        <div class="form-detail-area">
-          <p style="padding-right: 30px;">訂單編號：</p>
-          <p>01138271</p>
-        </div>
-        <div class="form-detail-area">
-          <p style="padding-right: 30px;">交易金額：</p>
-          <p>958</p>
-        </div>
-        <div class="form-detail-area">
-          <p style="padding-right: 30px;">交易日期：</p>
-          <p>0000/00/00</p>
-        </div>
-        <div class="form-detail-area" style="margin-bottom: 50px;">
-          <p style="padding-right: 30px;">支持信用卡種類</p>
-          <div class="card-img-group">
-            <div class="V-img"></div>
-            <div class="M-img"></div>
-            <div class="J-img"></div>
-          </div>
-        </div>
-        <div class="form-detail-area" style="margin-top: 20px;">
-          <p>本交易由中國信託商業銀行代理收款，付款時不限銀行皆可刷卡。</p>
-        </div>
-      </div>
-    </div>
-    <input type="hidden" name="timeOut"/><input type="hidden" name="_action"><input type="hidden" name="txtype" value="0"/><input type="hidden" name="ot" value="1576124824000" />
 
-    <script language="JavaScript">
-      function reset() {
-        document.payinfo.reset();
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <title>巨獸大特搜-HS-登入</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrap ">
+            <h1 class="pt-3 text-muted mission-name text-center">巨獸大特搜</h1>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-img-top signin-select"></div>
+                    <div class="card-body signin">
+                        <div class="card-text"></div>
+                        <p class="over">
+                            <span class="mission-bg">任務背景</span> 地球紀元9527年，一座在古生物基因領域擁有頂尖成就的研究所，疑似因其研究成果受到覬覦，遭到神秘組織的襲擊，利用所內的設備資源，製造出無數的史前巨獸，並將這些巨獸藏匿在城市內的各個角落。
+                            <br>
+                            <br> 隨後神秘組織狂妄的威脅政府，若不滿足組織所提出的各項要求，那麼就會讓這些巨獸們甦醒過來。並透過特殊裝置激怒巨獸，到時候盛怒下的巨獸們，將會瘋狂的攻擊眼前能見到的所有一切。
+
+
+                            <br>
+                            <br> 政府得知此消息之後，立刻採取了雷霆反擊，派遣國家特種部隊針對神秘組織實施了斬首行動，僅不到一天的時間，便順利破獲神秘組織的根據地，並擊斃了組織內的一眾首腦。
+
+                            <br>
+                            <br> 可惜的是，神秘組織的首腦們自知將不敵政府的優勢火力，臨死之前啟動了巨獸復甦裝置，意圖與這座城市同歸於盡。
+
+                            <br>
+                            <br> -----
+
+                            <br>
+                            <br>數小時之後，得力於神秘組織機密文件的尋獲，城市中大部分的巨獸藏匿地點已經被政府順利確認，並進行了回收。但仍有一小部分的巨獸所在位置始終無法找到。
+
+                            <br>
+                            <br>更要命的是，在組織機密文件中記載著，這些尚未找到的巨獸，是這些被製造出來的巨獸中，破壞力最為強大的一群，其中甚至還有神秘組織利用神秘的未知基因所製造出來的古老存在，其破壞力驚人。
+
+
+                            <br>
+                            <br>若不趕在這些巨獸甦醒前將其回收處理，恐怕後果將是任何政府都難以承受的毀滅性打擊。
+
+                            <br>
+                            <br>-----
+
+                            <br>
+                            <br>距離巨獸甦醒的剩餘時間不到2個小時的現在，你是某個知名偵探團隊的成員，正受到政府的委託，帶著解密出來的<span><button  data-toggle="modal" data-target="#hideModal">藏匿點</button> </span> 線索，準備前往目前剩餘巨獸最後藏匿的地點「華山」。
+
+                            <br>
+                            <br>你和你的其他團隊成員被寄予厚望，目標是在2個小時內找到剩餘的巨獸以挽救這座城市.....
+                            <br>
+                            <br>
+                        </p>
+                        <div class="input-group mb-2">
+                            <div class="input-group mb-3" v-if="control">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">稱呼</span>
+                                </div>
+                                <input type="text" class="form-control" v-model="name" style="width: 35%">
+                                <div class="input-group-prepend ml-2">
+                                    <span class="input-group-text">組別</span>
+                                </div>
+                                <input type="number" class="form-control" v-model="teamNum" style="width: 10%">
+                            </div>
+
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">密碼</span>
+                                </div>
+                                <input type="text" class="form-control" v-model="signintext">
+                                <button class="btn btn-secondary ml-2" type="button" data-toggle="modal" data-target="#SscModal" data-backdrop="static">確認</button>
+                            </div>
+
+
+
+                            <!-- <input type="text" class="form-control" placeholder="事件發生於地球紀元何年？" v-model="signintext">
+                            <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#SscModal">確認</button>
+                            </div> -->
+                        </div>
+
+                    </div>
+                    <div class="card-footer text-center">
+                        <small class="text-muted">華山1914 x AR擴增實境活動</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="SscModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-warning">
+                            <h5 class="modal-title">系統訊息</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                    </button>
+                        </div>
+                        <div class="modal-body m-3 text-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 訊息模型 藏匿點-->
+            <div class="modal fade" id="hideModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-warning">
+                            <h5 class="modal-title">任務說明</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body m-3">
+                            <span class="mission-bg">藏匿點：</span>
+                            <p>為政府從神秘組織的機密文件中所記載的暗號線索，是當時神秘組織安排手下藏匿巨獸時的地點位置與控制密碼。
+
+                                <br>
+                                <br>但由於這些暗號過於隱晦不明，至今政府仍然弄不明白暗號所代指的具體內容，專家推測這些暗號設計背後的邏輯思維，並不一定與一般正常人的思考方式相符。
+
+                                <br>
+                                <br>故若要破解暗號的內容，應該試著思考暗號背後邏輯的思維方式，對於暗號的破解才會有所進展。
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-backdrop="static">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>
+        var mv = new Vue({
+            el: '#app',
+            data: {
+                signinpassword: '9527',
+                teamNum: '',
+                signintext: '',
+                control: true,
+                name: '',
+            },
+            methods: {
+                upuserdata() {
+                    localStorage.setItem('user', JSON.stringify(this.$data));
+                }
+            },
+            mounted() {
+                if (JSON.parse(localStorage.getItem('user')) !== null) {
+                    let newdata = JSON.parse(localStorage.getItem('user'));
+                    this.teamNum = newdata.teamNum;
+                    this.name = newdata.name;
+                    this.control = false;
+                }
+            },
+        })
+    </script>
+    <script>
+        $(function() {
+            $('#SscModal').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget);
+                if (mv.signintext !== mv.signinpassword) {
+                    var recipient = '密碼未通過驗證'
+                    var modal = $(this);
+                    modal.find('.modal-body').text(recipient);
+                    mv.signintext = '';
+                } else {
+                    var recipient = '密碼驗證通過，系統載入中...'
+                    var modal = $(this);
+                    modal.find('.modal-body').text(recipient);
+                    mv.signintext = '';
+                    mv.upuserdata();
+                    setTimeout("window.location.href = 'contest-HS.html'", 2000)
+                }
+            })
+        });
     </script>
 
-    <style>
-      /* css reset */
-      html,
-      body,
-      div,
-      span,
-      applet,
-      object,
-      iframe,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p,
-      blockquote,
-      pre,
-      a,
-      abbr,
-      acronym,
-      address,
-      big,
-      cite,
-      code,
-      del,
-      dfn,
-      em,
-      font,
-      img,
-      ins,
-      kbd,
-      q,
-      s,
-      samp,
-      small,
-      strike,
-      strong,
-      sub,
-      sup,
-      tt,
-      var,
-      dl,
-      dt,
-      dd,
-      ol,
-      ul,
-      li,
-      fieldset,
-      form,
-      label,
-      legend,
-      table,
-      caption,
-      tbody,
-      tfoot,
-      thead,
-      tr,
-      th,
-      td {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-weight: inherit;
-        font-style: inherit;
-        font-size: 100%;
-        font-family: inherit;
-        vertical-align: baseline;
-      }
-      /* remember to define focus styles! */
-      :focus {
-        outline: 0;
-      }
-      body {
-        line-height: 1;
-        color: black;
-        background: white;
-      }
-      ol,
-      ul {
-        list-style: none;
-      }
-      /* tables still need 'cellspacing="0"' in the markup */
-      table {
-        border-collapse: separate;
-        border-spacing: 0;
-      }
-      caption,
-      th,
-      td {
-        text-align: left;
-        font-weight: normal;
-      }
-      blockquote:before,
-      blockquote:after,
-      q:before,
-      q:after {
-        content: "";
-      }
-      blockquote,
-      q {
-        quotes: "" "";
-      }
-
-      input,select {
-        -webkit-appearance: none; /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
-        -moz-appearance: none; /* FireFox */
-        appearance: none;
-      }
-    </style>
-    <style type="text/css">
-      body,
-      td,
-      th {
-        font-family: "Open Sans", sans-serif;
-      }
-      html {
-        font-family: sans-serif;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-      }
-      body {
-        background-color: #eeeef4;
-        margin: 0;
-        color: #999;
-        font-size: 14px;
-      }
-      .ef-title {
-        margin-bottom: 10px;
-        padding-top: 10px;
-      }
-
-      .form-wrap {
-        padding: 10px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      .form-main {
-        background: #ffffff;
-      }
-
-      .form-area {
-        padding: 10px 20px;
-      }
-
-      .form-item {
-        border-bottom: 1px solid #aaa;
-        padding-bottom: 10px;
-        padding-left: 5px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      .form-item.inputStyle input {
-        border: 1px solid #ffffff;
-        padding: 5px;
-        text-align: left;
-      }
-
-      .form-item.inputStyle select {
-        border: 1px solid #ffffff;
-        width: 20%;
-        padding: 5px;
-        text-align: center;
-        background-color: #ffffff;
-      }
-
-      .form-item.inputStyle2 input {
-        border: 1px solid #ffffff;
-        width: 80%;
-        padding: 5px;
-      }
-
-      .form-area input[type="button"] ,.form-area input[type="submit"]{
-        outline: none;
-        color: #ffffff;
-        font-size: 1em;
-        width: 25%;
-        background: #ffa6c1;
-        border: none;
-        transition: 0.5s all;
-        -webkit-transition: 0.5s all;
-        -moz-transition: 0.5s all;
-        -o-transition: 0.5s all;
-        -ms-transition: 0.5s all;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        cursor: pointer;
-      }
-
-      .btn-group {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-      }
-
-      .form-detail {
-        margin-top: 20px;
-      }
-
-      .form-detail-area {
-        padding: 5px 20px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-      .card-img-group {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-      .V-img {
-        margin-right: 3px;
-        height: 30px;
-        width: 50px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAoCAYAAABOzvzpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxMDg1Njc0RDcxMzJFODExOEU4OEJCMDExQzkyMzVCMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1MDQ1MzhCMjMyNzMxMUU4QTQ3M0VBNDIzNENBNjI1MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1MDQ1MzhCMTMyNzMxMUU4QTQ3M0VBNDIzNENBNjI1MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRTdDMzhFQTcyMzJFODExOEU4OEJCMDExQzkyMzVCMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxMDg1Njc0RDcxMzJFODExOEU4OEJCMDExQzkyMzVCMiIvPiA8L3JkZjpEZXNjcmlwdGlv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");
-      }
-      .M-img {
-        margin-right: 3px;
-        height: 30px;
-        width: 50px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAoCAYAAABOzvzpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowRDg1Njc0RDcxMzJFODExOEU4OEJCMDExQzkyMzVCMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0ODBDODA1RTMyNzMxMUU4QTNDMEJDMTIxNTI5MEY3RiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0ODBDODA1RDMyNzMxMUU4QTNDMEJDMTIxNTI5MEY3RiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDMDdDMzhFQTcyMzJFODExOEU4OEJCMDExQzkyMzVCMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowRDg1Njc0RDcxMzJFODExOEU4OEJCMDExQzkyMzVCMiIvPiA8L3JkZjpEZXNjcmlwdGlv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");
-      }
-      .J-img {
-        margin-right: 3px;
-        height: 30px;
-        width: 50px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAoCAYAAABOzvzpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGMkVCNDg0MTVFMzJFODExOEU4OEJCMDExQzkyMzVCMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0Qzk4MDVGRTMyNzMxMUU4OEYzRTlGMTM0MUQ2QTRENyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0Qzk4MDVGRDMyNzMxMUU4OEYzRTlGMTM0MUQ2QTRENyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRjdDMzhFQTcyMzJFODExOEU4OEJCMDExQzkyMzVCMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGMkVCNDg0MTVFMzJFODExOEU4OEJCMDExQzkyMzVCMiIvPiA8L3JkZjpEZXNjcmlwdGlv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");
-      }
-
-      @media (max-width: 414px) {
-        .form-wrap {
-          padding: 0;
-        }
-        .ef-title {
-          margin-right: 10px;
-        }
-      }
-    </style>
-    <p>&nbsp;</p>
-  </body>
-</html>
+    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 
-<script src="jquery-1.12.4.min.js"></script>
-<script src="paypage-custom.js"></script>
 </html>
-<!--[if lt IE 9]>
-  <script src="./plugin/ie8/html5shiv.min.js"></script>
-  <script src="./plugin/ie8/respond.min.js"></script>
-<![endif]-->
