@@ -1,204 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
     <title>巨獸大特搜-HS-登入</title>
     <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <div class="wrap ">
-            <h1 class="pt-3 text-muted mission-name text-center">巨獸大特搜</h1>
-            <div class="card-group">
-                <div class="card">
-                    <div class="card-img-top signin-select"></div>
-                    <div class="card-body signin">
-                        <div class="card-text"></div>
-                        <p class="over">
-                            <span class="mission-bg">任務背景</span> 地球紀元9527年，一座在古生物基因領域擁有頂尖成就的研究所，疑似因其研究成果受到覬覦，遭到神秘組織的襲擊，利用所內的設備資源，製造出無數的史前巨獸，並將這些巨獸藏匿在城市內的各個角落。
-                            <br>
-                            <br> 隨後神秘組織狂妄的威脅政府，若不滿足組織所提出的各項要求，那麼就會讓這些巨獸們甦醒過來。並透過特殊裝置激怒巨獸，到時候盛怒下的巨獸們，將會瘋狂的攻擊眼前能見到的所有一切。
+      <div class="wrap ">
+        <h1 class="pt-3 text-muted mission-name text-center">巨獸大特搜</h1>
+        <div class="card-group">
+          <div class="card">
+            <div class="card-img-top signin-select"></div>
+            <div class="card-body signin">
+              <div class="card-text"></div>
+              <p class="over">
+                <span class="mission-bg">任務背景</span>
+                地球紀元9527年，一座在古生物基因領域擁有頂尖成就的研究所，疑似因其研究成果受到覬覦，遭到神秘組織的襲擊，利用所內的設備資源，製造出無數的史前巨獸，並將這些巨獸藏匿在城市內的各個角落。
+                <br />
+                <br />
+                隨後神秘組織狂妄的威脅政府，若不滿足組織所提出的各項要求，那麼就會讓這些巨獸們甦醒過來。並透過特殊裝置激怒巨獸，到時候盛怒下的巨獸們，將會瘋狂的攻擊眼前能見到的所有一切。
 
+                <br />
+                <br />
+                政府得知此消息之後，立刻採取了雷霆反擊，派遣國家特種部隊針對神秘組織實施了斬首行動，僅不到一天的時間，便順利破獲神秘組織的根據地，並擊斃了組織內的一眾首腦。
 
-                            <br>
-                            <br> 政府得知此消息之後，立刻採取了雷霆反擊，派遣國家特種部隊針對神秘組織實施了斬首行動，僅不到一天的時間，便順利破獲神秘組織的根據地，並擊斃了組織內的一眾首腦。
+                <br />
+                <br />
+                可惜的是，神秘組織的首腦們自知將不敵政府的優勢火力，臨死之前啟動了巨獸復甦裝置，意圖與這座城市同歸於盡。
 
-                            <br>
-                            <br> 可惜的是，神秘組織的首腦們自知將不敵政府的優勢火力，臨死之前啟動了巨獸復甦裝置，意圖與這座城市同歸於盡。
+                <br />
+                <br />
+                -----
 
-                            <br>
-                            <br> -----
+                <br />
+                <br />數小時之後，得力於神秘組織機密文件的尋獲，城市中大部分的巨獸藏匿地點已經被政府順利確認，並進行了回收。但仍有一小部分的巨獸所在位置始終無法找到。
 
-                            <br>
-                            <br>數小時之後，得力於神秘組織機密文件的尋獲，城市中大部分的巨獸藏匿地點已經被政府順利確認，並進行了回收。但仍有一小部分的巨獸所在位置始終無法找到。
+                <br />
+                <br />更要命的是，在組織機密文件中記載著，這些尚未找到的巨獸，是這些被製造出來的巨獸中，破壞力最為強大的一群，其中甚至還有神秘組織利用神秘的未知基因所製造出來的古老存在，其破壞力驚人。
 
-                            <br>
-                            <br>更要命的是，在組織機密文件中記載著，這些尚未找到的巨獸，是這些被製造出來的巨獸中，破壞力最為強大的一群，其中甚至還有神秘組織利用神秘的未知基因所製造出來的古老存在，其破壞力驚人。
+                <br />
+                <br />若不趕在這些巨獸甦醒前將其回收處理，恐怕後果將是任何政府都難以承受的毀滅性打擊。
 
+                <br />
+                <br />-----
 
-                            <br>
-                            <br>若不趕在這些巨獸甦醒前將其回收處理，恐怕後果將是任何政府都難以承受的毀滅性打擊。
+                <br />
+                <br />距離巨獸甦醒的剩餘時間不到2個小時的現在，你是某個知名偵探團隊的成員，正受到政府的委託，帶著解密出來的<span
+                  ><button data-toggle="modal" data-target="#hideModal">
+                    藏匿點
+                  </button>
+                </span>
+                線索，準備前往目前剩餘巨獸最後藏匿的地點「華山」。
 
-                            <br>
-                            <br>-----
+                <br />
+                <br />你和你的其他團隊成員被寄予厚望，目標是在2個小時內找到剩餘的巨獸以挽救這座城市.....
+                <br />
+                <br />
+              </p>
+              <div class="input-group mb-2">
+                <div class="input-group mb-3" v-if="control">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">稱呼</span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    v-model="name"
+                    style="width: 35%"
+                  />
+                  <div class="input-group-prepend ml-2">
+                    <span class="input-group-text">組別</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    v-model="teamNum"
+                    style="width: 10%"
+                  />
+                </div>
 
-                            <br>
-                            <br>距離巨獸甦醒的剩餘時間不到2個小時的現在，你是某個知名偵探團隊的成員，正受到政府的委託，帶著解密出來的<span><button  data-toggle="modal" data-target="#hideModal">藏匿點</button> </span> 線索，準備前往目前剩餘巨獸最後藏匿的地點「華山」。
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">密碼</span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    v-model="signintext"
+                  />
+                  <button
+                    class="btn btn-secondary ml-2"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#SscModal"
+                    data-backdrop="static"
+                  >
+                    確認
+                  </button>
+                </div>
 
-                            <br>
-                            <br>你和你的其他團隊成員被寄予厚望，目標是在2個小時內找到剩餘的巨獸以挽救這座城市.....
-                            <br>
-                            <br>
-                        </p>
-                        <div class="input-group mb-2">
-                            <div class="input-group mb-3" v-if="control">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">稱呼</span>
-                                </div>
-                                <input type="text" class="form-control" v-model="name" style="width: 35%">
-                                <div class="input-group-prepend ml-2">
-                                    <span class="input-group-text">組別</span>
-                                </div>
-                                <input type="number" class="form-control" v-model="teamNum" style="width: 10%">
-                            </div>
-
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">密碼</span>
-                                </div>
-                                <input type="text" class="form-control" v-model="signintext">
-                                <button class="btn btn-secondary ml-2" type="button" data-toggle="modal" data-target="#SscModal" data-backdrop="static">確認</button>
-                            </div>
-
-
-
-                            <!-- <input type="text" class="form-control" placeholder="事件發生於地球紀元何年？" v-model="signintext">
+                <!-- <input type="text" class="form-control" placeholder="事件發生於地球紀元何年？" v-model="signintext">
                             <div class="input-group-append">
                             <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#SscModal">確認</button>
                             </div> -->
-                        </div>
-
-                    </div>
-                    <div class="card-footer text-center">
-                        <small class="text-muted">華山1914 x AR擴增實境活動</small>
-                    </div>
-                </div>
-
+              </div>
             </div>
-
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="SscModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-warning">
-                            <h5 class="modal-title">系統訊息</h5>
-                            <button type="button" class="close" data-dismiss="modal">
-                                <span>&times;</span>
-                    </button>
-                        </div>
-                        <div class="modal-body m-3 text-center">
-                        </div>
-                    </div>
-                </div>
+            <div class="card-footer text-center">
+              <small class="text-muted">華山1914 x AR擴增實境活動</small>
             </div>
-
-
-            <!-- 訊息模型 藏匿點-->
-            <div class="modal fade" id="hideModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-warning">
-                            <h5 class="modal-title">任務說明</h5>
-                            <button type="button" class="close" data-dismiss="modal">
-                                <span>&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body m-3">
-                            <span class="mission-bg">藏匿點：</span>
-                            <p>為政府從神秘組織的機密文件中所記載的暗號線索，是當時神秘組織安排手下藏匿巨獸時的地點位置與控制密碼。
-
-                                <br>
-                                <br>但由於這些暗號過於隱晦不明，至今政府仍然弄不明白暗號所代指的具體內容，專家推測這些暗號設計背後的邏輯思維，並不一定與一般正常人的思考方式相符。
-
-                                <br>
-                                <br>故若要破解暗號的內容，應該試著思考暗號背後邏輯的思維方式，對於暗號的破解才會有所進展。
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-backdrop="static">確認</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
+          </div>
         </div>
-    </div>
 
+        <!-- Modal -->
+        <div class="modal fade" id="SscModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-warning">
+                <h5 class="modal-title">系統訊息</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <div class="modal-body m-3 text-center"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 訊息模型 藏匿點-->
+        <div class="modal fade" id="hideModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-warning">
+                <h5 class="modal-title">任務說明</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <div class="modal-body m-3">
+                <span class="mission-bg">藏匿點：</span>
+                <p>
+                  為政府從神秘組織的機密文件中所記載的暗號線索，是當時神秘組織安排手下藏匿巨獸時的地點位置與控制密碼。
+
+                  <br />
+                  <br />但由於這些暗號過於隱晦不明，至今政府仍然弄不明白暗號所代指的具體內容，專家推測這些暗號設計背後的邏輯思維，並不一定與一般正常人的思考方式相符。
+
+                  <br />
+                  <br />故若要破解暗號的內容，應該試著思考暗號背後邏輯的思維方式，對於暗號的破解才會有所進展。
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-dismiss="modal"
+                  data-backdrop="static"
+                >
+                  確認
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
 
     <script>
-        var mv = new Vue({
-            el: '#app',
-            data: {
-                signinpassword: '9527',
-                teamNum: '',
-                signintext: '',
-                control: true,
-                name: '',
-            },
-            methods: {
-                upuserdata() {
-                    localStorage.setItem('user', JSON.stringify(this.$data));
-                }
-            },
-            mounted() {
-                if (JSON.parse(localStorage.getItem('user')) !== null) {
-                    let newdata = JSON.parse(localStorage.getItem('user'));
-                    this.teamNum = newdata.teamNum;
-                    this.name = newdata.name;
-                    this.control = false;
-                }
-            },
-        })
+      var mv = new Vue({
+        el: "#app",
+        data: {
+          signinpassword: "9527",
+          teamNum: "",
+          signintext: "",
+          control: true,
+          name: ""
+        },
+        methods: {
+          upuserdata() {
+            localStorage.setItem("user", JSON.stringify(this.$data));
+          }
+        },
+        mounted() {
+          if (JSON.parse(localStorage.getItem("user")) !== null) {
+            let newdata = JSON.parse(localStorage.getItem("user"));
+            this.teamNum = newdata.teamNum;
+            this.name = newdata.name;
+            this.control = false;
+          }
+        }
+      });
     </script>
     <script>
-        $(function() {
-            $('#SscModal').on('show.bs.modal', function(event) {
-                var button = $(event.relatedTarget);
-                if (mv.signintext !== mv.signinpassword) {
-                    var recipient = '密碼未通過驗證'
-                    var modal = $(this);
-                    modal.find('.modal-body').text(recipient);
-                    mv.signintext = '';
-                } else {
-                    var recipient = '密碼驗證通過，系統載入中...'
-                    var modal = $(this);
-                    modal.find('.modal-body').text(recipient);
-                    mv.signintext = '';
-                    mv.upuserdata();
-                    setTimeout("window.location.href = 'contest-HS.html'", 2000)
-                }
-            })
+      $(function() {
+        $("#SscModal").on("show.bs.modal", function(event) {
+          var button = $(event.relatedTarget);
+          if (mv.signintext !== mv.signinpassword) {
+            var recipient = "密碼未通過驗證";
+            var modal = $(this);
+            modal.find(".modal-body").text(recipient);
+            mv.signintext = "";
+          } else {
+            var recipient = "密碼驗證通過，系統載入中...";
+            var modal = $(this);
+            modal.find(".modal-body").text(recipient);
+            mv.signintext = "";
+            mv.upuserdata();
+            setTimeout("window.location.href = 'contest-HS.html'", 2000);
+          }
         });
+      });
+
+      document.fullscreenEnabled =
+        document.fullscreenEnabled ||
+        document.mozFullScreenEnabled ||
+        document.documentElement.webkitRequestFullScreen;
+
+      function requestFullscreen(element) {
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullScreen) {
+          element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        }
+      }
+
+      if (document.fullscreenEnabled) {
+        requestFullscreen(document.documentElement);
+      }
     </script>
 
-    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
